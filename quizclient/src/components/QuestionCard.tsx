@@ -1,6 +1,6 @@
 import React from "react";
 
-import { AnswerObject } from "../App";
+import { AnswerObject } from "../containers/Quiz";
 
 type Props = {
   question: string;
@@ -21,7 +21,7 @@ const QuestionCard: React.FC<Props> = ({
 }) => {
   return (
     <div>
-      <p className="number">
+      <p>
         Question: {questionNr} / {totalQuestions}
       </p>
       <p dangerouslySetInnerHTML={{ __html: question }}></p>
@@ -29,7 +29,7 @@ const QuestionCard: React.FC<Props> = ({
         {answers.map((answer) => (
           <div key={answer}>
             {/* 특정조건이 충족될때까지 버튼 사용 안됨 */}
-            <button disabled={!!userAnswer} value={answer} onClick={callback}>
+            <button value={answer} onClick={callback}>
               <span dangerouslySetInnerHTML={{ __html: answer }} />
             </button>
           </div>

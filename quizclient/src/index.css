@@ -1,0 +1,79 @@
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+  overflow: auto;
+  font-size: 16px;
+  padding: 0 !important;
+}
+
+@media screen and (max-width: 374px) {
+  html,
+  body,
+  #root {
+    font-size: 14px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  width: 100%;
+  position: relative;
+}
+
+#appLayout {
+  transition: all 0.2s;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.MuiPickersTimePickerToolbar-hourMinuteLabel {
+  align-items: center !important;
+}
+
+svg.icon {
+  width: 1rem;
+}
+
+.MuiPickersToolbar-toolbar.MuiPickerDTToolbar-toolbar .MuiPickersToolbarText-toolbarTxt.MuiTypography-h3 {
+  font-size: 2.125rem;
+}
+
+.MuiPickersToolbar-toolbar.MuiPickerDTToolbar-toolbar .MuiGrid-grid-xs-6 {
+  max-width: 40%;
+  flex-basis: 40%;
+}
+
+.MuiPickersToolbar-toolbar.MuiPickerDTToolbar-toolbar .MuiGrid-grid-xs-1 {
+  max-width: 18.333333%;
+  flex-basis: 18.333333%;
+}
+
+.MuiPickersToolbar-toolbar.MuiPickerDTToolbar-toolbar .MuiGrid-grid-xs-1 > button {
+  height: 32px;
+}
+
+input[type="password"] {
+  font-family: "Noto Sans KR" !important;
+  letter-spacing: 2px;
+}
+
+.disable-hover * {
+  pointer-events: none !important;
+}
+
+.NO_YEAR_DIALOG .MuiToolbar-root.MuiToolbar-regular.MuiPickersToolbar-toolbar.MuiPickersDatePickerRoot-toolbar.MuiToolbar-gutters>button:first-child {
+  display: none;
+}
